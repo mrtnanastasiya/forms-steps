@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Training from './Components/Training/Training';
+import TrainingForm from './Components/Training/TrainingForm';
+import TrainingTable from './Components/Training/TrainingTable';
 import './Components/Training/Training.css';
 
 function App() {
@@ -55,7 +56,8 @@ function App() {
   return (
     <div className="app">
       <h1>Учёт тренировок</h1>
-      <Training onAdd={addTraining} trainings={trainings} onDelete={deleteTraining} />
+      <TrainingForm onAdd={addTraining} />
+      <TrainingTable trainings={trainings} onDelete={deleteTraining} />
     </div>
   );
 }
